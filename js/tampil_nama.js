@@ -1,7 +1,11 @@
 function GetUrl()
 {
     var sPageURL = window.location.search.substring(1);
-    var split = sPageURL.split('=')
+    var res = sPageURL.toString();
+    res = res.replace('%20',' ');
+    var split = res.split('=')
+    
+    
     return split[1]
 
     }
